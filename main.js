@@ -7,7 +7,7 @@ let speed = 100;
 let ready = false;
 
 app.whenReady().then(() => {
-  const tray = new Tray("./icons/rocket.png");
+  const tray = new Tray("./images/rocket.png");
   const pmset = spawn("pmset", ["-g", "thermlog"]);
   pmset.stdout.on("data", (data) => {
     speed =
@@ -39,10 +39,10 @@ app.whenReady().then(() => {
     }
     tray.setImage(
       !ready
-        ? "./icons/clock.png"
+        ? "./images/clock.png"
         : heated
-        ? "./icons/fire.png"
-        : "./icons/rocket.png"
+        ? "./images/fire.png"
+        : "./images/rocket.png"
     );
     if (ready) {
       tray.setToolTip(heated ? "Stai andando a fuoco!" : "Tutto bene");

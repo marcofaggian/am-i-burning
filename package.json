@@ -24,7 +24,8 @@
     "productName": "Am I Burning?",
     "appId": "org.marcofaggian.AmIBurning",
     "files": [
-      "icons/",
+      "images/",
+      "resources",
       "node_modules/",
       "index.html",
       "main.js",
@@ -60,7 +61,7 @@
         "rpm",
         "AppImage"
       ],
-      "category": "Utilities"
+      "category": "Utility"
     },
     "directories": {
       "buildResources": "icons",
