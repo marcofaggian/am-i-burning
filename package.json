@@ -4,7 +4,8 @@
   "description": "A minimal check for termal throttling",
   "main": "main.js",
   "scripts": {
-    "start": "electron . -w"
+    "start": "electron . -w",
+    "dist": "electron-builder"
   },
   "repository": "https://github.com/marcofaggian/am-i-burning",
   "keywords": [
@@ -31,8 +32,7 @@
       "package.json"
     ],
     "mac": {
-      "category": "public.app-category.utilities",
-      "dist": "electron-builder"
+      "category": "public.app-category.utilities"
     },
     "dmg": {
       "contents": [
