@@ -15,7 +15,62 @@
   "author": "Marco Faggian <m@marcofaggian.com>",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^9.0.0"
+    "electron": "^9.0.0",
+    "electron-builder": "^22.7.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "build": {
+    "productName": "Am I Burning?",
+    "appId": "org.marcofaggian.AmIBurning",
+    "files": [
+      "icons/",
+      "node_modules/",
+      "index.html",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.utilities",
+      "dist": "electron-builder"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "msi"
+      ]
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "rpm",
+        "AppImage"
+      ],
+      "category": "Utilities"
+    },
+    "directories": {
+      "buildResources": "icons",
+      "output": "release"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "marcofaggian",
+      "repo": "am-i-burning",
+      "private": false
+    }
+  }
 }
