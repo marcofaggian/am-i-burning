@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron . -w",
-    "dist": "electron-builder -p"
+    "dist": "electron-builder -p always"
   },
   "repository": "https://github.com/marcofaggian/am-i-burning",
   "keywords": [
